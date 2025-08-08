@@ -1,0 +1,1446 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,200&display=swap');
+
+html,
+body {
+  scroll-behavior: smooth;
+
+
+
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  // @apply bg-[#f0f0f0]
+
+}
+
+nav {
+  @apply w-full h-[56px] bg-[#0f0c27] flex justify-start items-center text-white font-semibold text-lg fixed top-0 z-50 py-2 pl-2;
+
+
+  .lineunder {
+    border: none;
+    border-bottom: 3px solid white;
+    font-weight: 500;
+    @apply font-bold
+  }
+
+  .logo {
+    @apply flex justify-center items-center gap-2 w-fit my-auto z-40;
+    background-color: inherit;
+div{
+  background-color: inherit;
+
+}
+  }
+
+  img {
+    @apply w-[35px] h-[35px] overflow-hidden bg-cover rounded-full;
+  }
+
+  .menu {
+    @apply w-[40px] h-[40px] ml-auto mr-[8px] cursor-pointer rounded-md p-2;
+
+    &:hover {
+      @apply bg-white/20
+    }
+  }
+
+  .dropdownmenu {
+    @apply fixed z-20 top-0 bg-[#0f0c27] flex flex-col justify-start items-center w-full h-screen text-white left-[100%];
+
+
+
+    .menutitle {
+      @apply w-full min-h-[60px] bg-[#0f0c27] flex justify-between items-center text-white;
+
+      .logotitle {
+        @apply flex justify-center items-center gap-1;
+
+        .ls {
+          @apply w-[40px] h-[40px] p-1 text-2xl bg-white text-blue-700 ml-2 text-center rounded-full shadow-black shadow-sm font-bold
+        }
+
+        .divider {
+          width: 2px;
+          height: 30px;
+          background-color: white;
+        }
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+        margin-right: 16px;
+      }
+    }
+
+    a {
+      @apply text-3xl font-normal my-4 w-full text-center min-h-[50px] align-middle;
+      background-color: inherit;
+
+    }
+  }
+
+  .opennav {
+    animation: openmenu .25s ease-in forwards;
+
+  }
+
+  .closenav {
+    animation: closemenu .5s ease-out forwards;
+
+  }
+
+  ul {
+    @apply ml-auto justify-start  items-center mr-[16px] gap-4 font-light hidden ;
+    background-color: inherit;
+
+
+    a {
+      @apply px-2 py-1 cursor-pointer font-normal;
+      background-color: inherit;
+
+
+      &:hover {
+        @apply border-b-[1pxn] border-b-white
+      }
+    }
+  }
+
+}
+
+
+.sectionContainer {
+  @apply w-full min-h-fit bg-[#0f0c27] box-border flex flex-col ml-auto mr-auto items-center justify-start py-[16px];
+
+  h1 {
+    @apply text-white py-2 px-5 bg-blue-700 rounded-full text-lg font-semibold
+  }
+
+  .sectiontitle {
+    @apply text-[30px] font-semibold text-white px-5 py-2;
+    position: relative;
+    width: 100%;
+    // padding: 4px;
+    min-height: 100px;
+    // background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+
+    .backline {
+      @apply h-[4px] shadow-black/40 shadow-sm;
+      position: absolute;
+      background-color: white;
+      width: 70%;
+      height: 1px;
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;;
+      z-index: 0;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      top: 60%;
+    }
+
+    .backline:nth-child(1) {
+      // background-color: white;
+      width: 60%;
+
+      top: 68%;
+    }
+
+    h2 {
+      // line-height: 1.5px;
+      // background-color: royalblue;
+      width: fit-content;
+      padding: inherit;
+      position: relative;
+      z-index: 1;
+      color: white
+    }
+  }
+
+  .sectiontitle:nth-child(1) {
+    // @apply text-blue-700;
+
+    .backline {
+      @apply h-[4px] shadow-black/40 shadow-sm
+    }
+
+  }
+
+}
+
+
+.overlay {
+  @apply absolute top-0 left-0 w-full h-screen min-h-[300px] z-10 flex flex-col justify-start items-center text-white text-lg font-semibold box-border;
+  //bg-gradient-to-b from-blue-700/40 to-black/60
+
+
+  .backdropblur {
+    @apply w-[90%] min-h-[100vh] flex flex-col text-center p-2 justify-start items-center shadow-white/10 mb-[20px] shadow-md mt-[20px] rounded-md gap-10 backdrop-blur py-4;
+
+    .homelogo {
+      @apply w-[100px] h-[100px] bg-gradient-to-b bg-white rounded-full overflow-hidden mt-4;
+      // background-image: url('../assets/l-studioafrikatransparent.png')
+    }
+
+    p {
+      @apply text-lg italic font-light;
+
+      strong {
+        @apply not-italic text-lg font-bold
+      }
+    }
+
+    h3 {
+      @apply italic text-base;
+
+
+    }
+
+    // min-height: 200px
+  }
+
+  h2 {
+    @apply w-3/4 text-center mt-4
+  }
+
+
+
+  button {
+    @apply bg-gradient-to-r from-blue-700 to-blue-500 py-1 px-4 rounded-md font-medium
+  }
+
+}
+
+.home {
+  @apply mt-[56px] lg:mt-0  min-h-screen h-fit pt-[60px] text-white font-bold relative   flex-col justify-start items-center
+
+lg:flex-row
+  ;
+  // background-image: url('../assets/unsplash/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+
+  .socials{
+    @apply hidden sm:flex w-[50px] min-h-[200px]   justify-evenly items-center flex-col absolute left-[20px] top-[50%] translate-y-[-50%] xl:w-[100px] xl:min-h-[300px];
+    a{
+      @apply w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] xl:w-[60px] xl:h-[60px]
+    }
+  }
+
+  .box {
+    display: none
+  }
+.svgs{
+  display: none
+}
+
+
+  .mobileherowrapper {
+    @apply flex flex-col justify-start items-center relative z-30 
+    lg:w-full lg:max-w-[700px] xl:max-w-[800px] xl:items-center lg:pl-20 xl:pl-[100px];
+
+    .welcomemobile{
+      @apply text-5xl mb-5 xl:text-[100px];
+      .shakeanimation{
+      
+      }
+    }
+.intro{
+  @apply max-w-[350px] font-light text-center text-xl xl:text-3xl xl:max-w-[800px] xl:text-center;
+  line-height: 1.7;
+  strong{
+    @apply text-teal-500 font-bold text-xl xl:text-3xl
+  }
+}
+.talktomebtn{
+   @apply bg-white min-w-[200px] min-h-[50px]  text-[#0f0c27] rounded-[5px] mt-5
+         flex justify-center items-center gap-x-2;
+   svg{
+    @apply min-w-[40px] min-h-[40px] 
+   }
+}
+
+.projectq{
+  @apply mt-5 font-semibold
+}
+
+    .dynamictext {
+      @apply w-full bg-transparent h-[50px] my-4 overflow-hidden relative;
+
+      div {
+        @apply h-[50px] w-full text-center pt-4 font-bold mt-[55px] top-0 absolute text-2xl;
+      }
+    }
+
+    // button::before {
+    //   content: '';
+    //   background-color: teal;
+    //   width: 200px
+    // }
+
+    // button {
+    //   @apply bg-white min-w-[250px]  text-[#0f0c27] rounded-[5px]
+    //     font-semibold px-4 py-2 float-right mt-10 text-2xl outline-none
+    // }
+
+    .caption {
+      @apply  text-lg font-light text-teal-600 my-2  float-left;
+    }
+
+    p {
+      @apply text-3xl font-light mb-4;
+    }
+
+    h2 {
+      @apply text-4xl py-2  bg-[#0f0c27] text-white px-8 border-white border-[4px] mb-4 rounded-md pr-4
+    }
+
+  }
+  .avatar{
+    @apply w-[250px] h-[250px]  mb-5 bg-cover flex justify-center items-center
+     mx-auto  lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] 2xl:w-[700px] 2xl:h-[700px];
+     background-image: url('https://firebasestorage.googleapis.com/v0/b/lstudiosafrikake.appspot.com/o/me.JPG?alt=media&token=97152b89-40c2-4ddd-9752-f0abb3e0eda0');
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    animation: borderradius 8s ease-in-out infinite 1s;
+    box-shadow: inset 0 0 0 9px rgb(226 232 240/60%)
+  }
+
+
+}
+
+
+
+.aboutus {
+  @apply min-h-screen h-fit relative flex flex-col justify-start items-center bg-[#0f0c27] mt-0;
+  // background-image: url('../assets/unsplash/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg');
+
+
+
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+
+  .lgscreenaboutus {
+    display: none;
+  }
+
+  .sectiontitle {
+    h2 {
+      @apply text-blue-700 font-bold
+    }
+
+    .backline {
+      @apply bg-[#0f0c27] h-[4px]
+    }
+  }
+
+  .title{
+    @apply text-white text-4xl font-semibold text-center
+  }
+
+.description{
+  @apply max-w-[400px] w-full mb-5  rounded-md mt-5 text-white text-base text-center font-normal p-2
+  ;
+  // md:max-w-[50%] md:flex md:flex-col md:justify-start md:items-center gap-8 md:p-8
+
+  // max-width: 50%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: center;
+  // gap: 2rem;
+  // padding: 8px;
+  // color: white;
+
+
+  strong{
+    @apply text-teal-600 text-[20px]
+  }
+
+}
+.avatar{
+  @apply max-w-[200px] max-h-[200px] min-w-[200px]
+   bg-cover overflow-hidden min-h-[200px]  rounded-md mt-5 mx-auto mb-5;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/lstudiosafrikake.appspot.com/o/me2.JPG?alt=media&token=7862c5d8-db68-443d-bd2c-01cdab34bf3f  ')
+}
+.skillcontainer{
+  @apply max-w-[400px] w-full min-h-[500px] text-white text-base text-center font-normal p-2;
+
+
+
+  .resume{
+    @apply text-[20px] font-semibold mt-[20px] text-white bg-teal-500
+     min-w-[180px] px-2 py-3 outline-none min-h-[25px] rounded-md flex justify-center
+    items-center gap-3 mx-auto relative
+  }
+  .skill{
+  @apply text-[30px] font-semibold
+  }
+  .skillscontainer{
+  @apply w-full  flex flex-col items-start mt-6;
+
+  .tag{
+    @apply w-full  flex justify-between ;
+    .tech{
+  @apply font-semibold text-lg
+    }
+    .percent{
+      @apply font-normal text-lg
+    }
+  }
+
+  .progress{
+    @apply bg-slate-400 w-full min-h-[10px] rounded-full mt-2;
+  .progvalue{
+  @apply bg-teal-500 min-h-[10px] rounded-full
+  }
+
+  }
+  }
+}
+
+
+
+
+  .aboutuscontainer {
+    @apply w-4/5 min-h-[200px] p-4 my-2 text-slate-200 font-semibold  relative;
+
+    // animation: aboutusentrance 2s ease-in forwards;
+
+    h2 {
+      @apply text-2xl font-bold text-blue-700  text-center my-4
+    }
+
+
+
+  }
+
+  .btn {
+    @apply text-center mt-3 bg-blue-600 py-2 px-4 rounded-full text-white
+  }
+
+}
+
+
+
+
+//
+.services {
+  @apply relative h-fit  bg-[#0f0c27]  lg:min-h-[50vh] lg:pl-[200px]  lg:pr-[200px] lg:gap-5;
+
+.servicecontainer{
+  @apply w-[85%] max-w-[300px] bg-[#110e2b] 
+   mt-5 min-h-[300px] h-[300px]  lg:mt-0  flex flex-col rounded-md lg:max-w-[300px] lg:min-h-[300px]
+
+   xl:min-h-[400px] xl:min-w-[400px]
+  justify-center items-center;
+  .serviceicon{
+    @apply min-w-[100px] h-[100px]  w-fit flex justify-center items-center;
+    svg{
+      width: 50px;
+      height: 50px
+    }
+  }
+  .servicetitle{
+    @apply text-lg font-semibold text-white mt-5;
+  }
+
+  .servicedetails{
+    @apply font-semibold text-lg text-teal-500 mt-5 cursor-pointer
+
+  }
+
+}
+
+
+  .servicecardholderdesktop {
+    @apply hidden relative
+  }
+
+  .svgtop {
+    @apply absolute top-0 left-0 h-[300px] w-full
+  }
+
+  .svgbottom {
+    @apply absolute bottom-0 left-0
+  }
+
+  // background-image: url('../assets/unsplash/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg');
+  background-size: cover;
+  overflow: hidden;
+
+  .servicecardholder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    // background-color: #fff;
+
+  }
+
+  .servicescard {
+    @apply w-2/3 min-h-[250px] my-3 flex flex-col justify-start items-center p-[16px] box-border;
+    border-radius: 10px;
+    // box-shadow: 1px 3px 15px 2px rgba(0, 0, 0, 0.28)
+  }
+
+  .leadtitle {
+    @apply py-2 text-white font-semibold w-full my-2 flex justify-center;
+    // box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.328);
+
+
+    .text {
+      @apply px-4 py-2 font-semibold w-fit float-left rounded-full bg-white text-blue-700 mb-3;
+
+    }
+  }
+
+
+
+  .icon {
+    @apply w-[100px] h-[100px] bg-white overflow-hidden;
+    border-radius: 999px;
+
+    // box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.328);
+
+  }
+
+  .title {
+
+    @apply text-white font-semibold text-lg my-2
+  }
+
+  .paragraph {
+    @apply text-blue-700 font-light text-lg my-2 italic
+  }
+
+
+
+}
+
+.portfolio {
+  @apply p-4;
+  min-height: 100vh;
+  // background-image: url('../assets/unsplash/kari-shea-1SAnrIxw5OY-unsplash.jpg');
+  background-size: cover;
+  overflow: hidden;
+
+  .sectiontitle {
+    h2 {
+      @apply text-white font-semibold text-3xl
+    }
+
+    .backline {
+      @apply bg-blue-700
+    }
+  }
+
+  .portfolioparagraph {
+    @apply text-white font-semibold text-lg rounded-md my-2 p-2 py-3 bg-black/30 backdrop-blur w-[70%];
+
+  }
+
+  .cardprojects {
+    @apply min-w-[250px] rounded-md min-h-[300px] w-full flex flex-col relative overflow-hidden;
+
+
+
+    .project {
+      @apply w-[256px]  h-[256px]  py-2 overflow-hidden mb-2 bg-cover bg-slate-700 cursor-pointer gap-3 relative flex flex-col items-center justify-center rounded-md shadow-md ml-auto mr-auto;
+      box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.628);
+
+
+      .info{
+        @apply absolute top-0 right-1 w-[40px] h-[40px] fill-white
+      }
+
+      .hue {
+
+        @apply bg-gradient-to-b from-black/70 via-black/40 to-black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // background-color: black;
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+        height: 250px;
+
+        &:hover {
+          @apply scale-105
+        }
+
+
+      }
+
+      &:hover {
+     //   @apply scale-105 rounded-md
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        overflow: hidden;
+        width: 100%;
+        z-index: 0;
+        height: 250px;
+      }
+
+      .projecttitle {
+        @apply ml-auto mr-auto font-normal text-2xl my-2 mb-4 mt-auto text-white py-1 rounded-full px-5 box-border relative z-10;
+        // text-[#303e9f]
+      }
+
+      button {
+        @apply bg-teal-500 mt-auto mb-5 px-6 box-border rounded-full outline-none border-white border-2 min-w-[60px] relative z-20 text-white
+      }
+    }
+
+
+  }
+}
+
+.contactus {
+  @apply bg-[#0f0c27];
+  min-height: fit-content;
+  padding-bottom: 40px;
+
+  .sectiontitle {
+    h2 {
+      @apply text-white font-semibold text-3xl
+    }
+
+    .backline {
+      @apply bg-white h-[2px]
+    }
+  }
+
+  .form-container {
+    @apply block max-w-md p-6 bg-white rounded-md shadow-lg w-2/3 min-h-[350px] sm:max-w-[350px];
+
+    .form-group {
+      @apply mb-6 mt-4 bg-white;
+      h2{
+        @apply bg-teal-500 text-white w-fit font-bold p-2 pr-5 rounded-r-full
+      }
+
+      input,
+      textarea {
+        @apply block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0;
+
+        &:focus {
+
+          @apply bg-white border-blue-600 outline-none
+        }
+      }
+
+
+
+    }
+
+    button {
+      @apply w-full px-6 py-2.5 bg-blue-600 gap-4 text-white flex justify-center items-center font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out;
+
+
+      .lds-facebook {
+        display: inline-block;
+        position: relative;
+        min-width: 40px;
+        // background-color: teal;
+        width: fit-content;
+        height: 30px;
+        margin-bottom: 16px;
+
+
+
+      }
+
+      .lds-facebook div {
+        display: inline-block;
+        position: absolute;
+        border-radius: 999px;
+        // left: 4px;
+        top: 0;
+        width: 6px;
+        background: #fff;
+        animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+      }
+
+      .lds-facebook div:nth-child(1) {
+        left: 8px;
+        animation-delay: -0.24s;
+      }
+
+      .lds-facebook div:nth-child(2) {
+        left: 20px;
+        animation-delay: -0.12s;
+      }
+
+      .lds-facebook div:nth-child(3) {
+        left: 32px;
+        animation-delay: 0;
+      }
+
+    }
+
+    .enable {
+      @apply bg-blue-600 cursor-pointer
+    }
+
+    .disable {
+      @apply bg-teal-500 cursor-not-allowed
+    }
+  }
+
+  .footericons {
+    @apply w-full min-h-[100px] flex justify-center items-center gap-4 mt-4;
+
+    svg {
+      @apply w-[40px] h-[40px];
+      fill: white;
+    }
+  }
+
+  .footercontacts {
+    @apply w-2/3 flex justify-center items-center my-1 p-1 gap-2 text-white
+  }
+
+  .copyright {
+    @apply mt-[100px] flex justify-center
+  }
+}
+
+
+.in {
+  animation: titlein 1.5s ease-in forwards;
+}
+
+.out {
+  animation: titleout 1.5s ease-out forwards;
+
+}
+
+
+.aboutusanimation{
+  // animation: aboutusanimation 2s  forwards;
+}
+
+
+
+
+
+
+@keyframes openmenu {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+
+}
+
+@keyframes closemenu {
+  0% {
+    left: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    left: calc(100% + 10px);
+    opacity: 0;
+
+  }
+
+}
+
+@keyframes titlein {
+  0% {
+    margin-top: 55px;
+  }
+
+  70% {
+    margin-top: 0px;
+  }
+
+  100% {
+    margin-top: 0px;
+
+  }
+
+
+}
+
+@keyframes titleout {
+
+  0% {
+    margin-top: 0px;
+  }
+
+  70% {
+    margin-top: -55px;
+  }
+
+  100% {
+    margin-top: -55px;
+
+  }
+
+}
+
+
+
+@keyframes heroimageentrance {
+  0% {
+    right: -110%
+  }
+
+  100% {
+    right: 0;
+  }
+
+}
+
+@keyframes herotextentrance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes aboutusentrance {
+
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 32px;
+  }
+
+  50%,
+  100% {
+    top: 16px;
+    height: 16px;
+  }
+}
+
+
+@keyframes servicesaboutusanimation {
+  0%{
+opacity: 0;
+top: 100px;
+
+  }
+  100%{
+  opacity: 1;
+  top: 0;
+  }
+
+}
+
+@keyframes home {
+
+  0%{
+    opacity: 0;
+    // scale: 0;
+    // right: -50%;
+  }
+  100%{
+    opacity: 1;
+    // scale: 1;
+    // right: 100px;
+  }
+
+}
+
+
+
+app-viewproject {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.45);
+  @apply flex flex-col justify-center items-center p-2 backdrop-blur-md;
+}
+
+@media screen and (min-width: 425px) {
+
+  .portfolio {
+    .sectiontitle {
+      margin-top: 24px
+    }
+
+    .cardprojects {
+      @apply flex-row justify-center flex-wrap gap-3;
+
+      .project {
+        @apply max-w-[256px]
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 648px) {
+
+  .portfolio {
+    .cardprojects {
+      @apply grid-cols-3;
+
+      .project {
+
+      }
+    }
+  }
+
+  .sectionContainer {
+
+
+    .aboutuscontainer {
+      @apply w-[90%] grid grid-cols-2 grid-rows-[50px_1fr] max-w-[650px];
+
+      img {
+        @apply row-span-2 col-span-1 w-fit h-fit justify-center items-center max-w-[240px] min-h-[200px] mr-auto ml-auto mt-auto mb-auto
+      }
+    }
+
+    .chooseus {
+      @apply pb-4;
+
+      img {
+        @apply max-w-[210px]
+      }
+    }
+
+    .ourspecialties {
+      img {
+        @apply w-fit h-fit justify-center items-center max-w-[240px] min-h-[200px];
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  nav {
+
+    .menu {
+      display: none;
+    }
+
+    ul {
+      display: flex
+
+    }
+  }
+
+  .sectionContainer {
+    .sectiontitle {
+      @apply w-full flex justify-center items-center mt-[16px];
+
+      h2 {
+        @apply text-center
+      }
+
+      .backline {
+        @apply w-[30%]
+      }
+
+      .backline:nth-child(1) {
+        @apply w-[25%]
+      }
+    }
+
+    .aboutuscontainer {
+      @apply w-[90%] max-w-[750px] min-h-[250px] ;
+      opacity: 0;
+
+      img {
+        @apply row-span-2 col-span-1 w-fit h-fit
+      }
+    }
+
+    .aboutusanimation{
+
+    animation: servicesaboutusanimation .3s ease-in forwards;
+      }
+
+    .ourspecialties {
+      img {
+        @apply w-fit h-fit justify-center items-center max-w-[240px] min-h-[200px];
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
+    }
+  }
+
+  .services {
+    @apply flex-row justify-center flex-wrap gap-2;
+
+    .servicecardholderdesktop {
+      @apply flex flex-col justify-start items-center;
+      width: 90%;
+      height: fit-content;
+      opacity: 0;
+
+
+      .servicecarddesktop {
+        min-height: 200px;
+        // background-color: orange;
+        margin-bottom: 32px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        max-width: 1100px;
+        // background-color: teal;
+
+        img {
+          width: 250px;
+          height: 250px;
+          overflow: hidden;
+          // background: #000;
+        }
+
+        .description {
+          max-width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 2rem;
+          padding: 8px;
+          color: white;
+
+
+          .titledesktop {
+            @apply text-lg text-blue-800 font-semibold bg-white rounded-full py-1 px-5
+          }
+
+        }
+      }
+
+
+
+      .servicecardflexreverse {
+        flex-direction: row-reverse;
+      }
+    }
+    .aboutusanimation{
+
+      // background-color: teal;
+    animation: servicesaboutusanimation .3s ease-in forwards;
+      }
+
+    .servicecardholder {
+      width: 100%;
+      display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      max-width: 1100px;
+      // gap: 16px // background-color: #fff;
+
+      // @apply grid grid-cols-2 grid-rows-2;
+      // place-items: center;
+
+    }
+
+    .servicescard {
+      @apply max-w-[300px];
+
+      .icon {
+        @apply w-[150px] h-[150px] bg-transparent
+      }
+    }
+
+    .leadtitle .text {
+      min-width: 100px;
+      text-align: center;
+
+      span {
+        display: none
+      }
+    }
+  }
+
+  .portfolio {
+    @apply min-h-fit;
+
+    .cardprojects {
+      gap: 20px;
+      @apply max-w-[1200px];
+
+      .project {
+        @apply mx-0 min-w-[256px]
+      }
+    }
+  }
+
+  .contactus {
+
+    .form-container {
+
+      @apply max-w-[300px]
+    }
+
+    .footercontacts {
+      @apply justify-center
+    }
+
+    .copyright {
+      @apply mt-[50px]
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 900px) {
+  .portfolio {
+    min-height: fit-content;
+
+    .cardprojects {
+      // display: none;
+
+      .project {
+        @apply min-w-[250px] min-h-[225px]
+      }
+    }
+  }
+
+
+
+  .home .circle {
+    // background-color: blue;
+    // display: none;
+    border-radius: 500px 0 0 0;
+    bottom: -25%;
+    left: 30%;
+    // right: -50%;
+    width: 100vh;
+    height: 100vh;
+    // top: 100px;
+  }
+
+  .cardprojects {
+    // background-color: purple;
+    max-width: 1000px;
+    min-height: 500px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .services {
+    // min-height: 550px !important;
+
+    .servicecardholder {
+      // background-color: pink;
+      display: none;
+    }
+
+    .servicescard {
+      @apply max-w-[275px]
+    }
+  }
+
+  .portfolio {
+    min-height: 500px !important;
+
+  }
+
+  .aboutus {
+    display: flex;
+    // grid-template-columns: 1fr minmax(400px, 550px) minmax(400px, 550px) 1fr;
+    // grid-template-rows: 100px 1fr 1fr;
+    min-height: 700px;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    // max-width: 1100px;
+    background-size: cover;
+    // background-image: url('../assets/unsplash/mean\ 2.png');
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    // align-content: center;
+
+    .aboutuscontainer {
+      max-width: 1200px;
+      background-color: white;
+      opacity: 0;
+    }
+
+
+ .aboutusanimation{
+
+  // background-color: teal;
+animation: servicesaboutusanimation .3s ease-in forwards;
+  }
+
+    .ourspecialties {
+
+      img {
+        max-height: 170px;
+      }
+    }
+
+
+
+    .sectiontitle {
+      position: relative;
+      height: 100px;
+      padding: 0;
+      margin-top: 24px;
+
+      h2 {
+        // color: white;
+        font-size: 28px;
+
+      }
+
+
+    }
+
+
+  }
+
+  .contactus {
+    @apply flex flex-col justify-start items-center gap-5 pb-0 min-h-[100vh];
+
+    .sectiontitle {
+      @apply  min-w-full text-center flex justify-center items-center
+    }
+
+    .form-container {
+       @apply min-w-[400px] min-h-[500px] ;
+       form{
+        @apply min-h-full 
+       }
+       .form-group {
+        @apply my-10 bg-white;}
+    }
+
+    .footericons {
+      min-height: 0;
+      margin-top: 30px;
+      justify-content: center;
+      cursor: pointer;
+      gap: 30px;
+      svg{
+        @apply w-[80px] h-[80px]
+      }
+
+    }
+
+    .footercontacts {
+      justify-content: center;
+     // padding-left: 100px;
+
+    }
+
+    .copyright {
+      @apply col-span-2 w-full flex justify-center mb-2
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .home {
+
+.maxwidthhome{
+  @apply w-full max-w-[1200px]  h-screen flex  flex-row items-center justify-center lg:flex-row-reverse lg:mx-auto xl:max-w-[1400px]
+  xl:gap-[50px]
+  ;
+}
+
+
+    .svgs{
+      // margin-right: 20px;
+      margin-left: auto;
+      // margin-top: 2rem;
+      position: absolute;
+      // margin-bottom: 400px;
+      top: 100px;
+      display: flex;
+      align-items: flex-start;
+      background-color: inherit;
+      min-width: 600px;
+      min-height: 600px;
+          //  background-color: teal;
+      flex-grow: 1;
+      right: 100px;
+      animation: home 3s ease-in forwards;
+      img{
+        // @apply mt-5
+      }
+
+    }
+
+
+
+
+
+  }
+
+  .services {
+
+    @apply gap-[24px];
+    .servicecardholderdesktop {
+      @apply flex flex-col justify-start items-center max-w-[1000px];
+      width: 90%;
+      height: fit-content;
+    }
+  }
+
+
+  .aboutus {
+
+    justify-items: center;
+
+    .maxwidth{
+    @apply grid grid-cols-2 grid-rows-[100px_200px_400px] gap-x-[150px] xl:gap-[100px];
+
+      max-width: 1300px;
+
+    }
+
+    .title{
+@apply col-span-2 text-center flex justify-end flex-col  ;
+span{
+  @apply mt-auto xl:text-[60px]
+}
+    }
+    .description{
+      @apply row-start-2 row-end-4 col-start-1 col-end-2    ;
+      .avatar{
+        @apply max-w-[250px] max-h-[250px] min-h-[250px] min-w-[250px]
+        xl:max-w-[350px] xl:max-h-[350px] xl:min-h-[350px] xl:min-w-[350px]
+      }
+      p{
+        @apply text-lg h-fit
+      }
+    }
+    .skillcontainer{
+      @apply row-start-2 row-end-4 col-start-2 col-end-3 mt-7
+
+    }
+    .aboutuscontainer {
+      max-width: 1200px;
+      min-height: 400px;
+      // background-color: white;
+
+
+    }
+
+  }
+}
+
+@media screen and (min-width: 1280px) {
+.portfolio{
+  // @apply min
+
+  .project{
+    @apply min-w-[300px] min-h-[300px]
+  }
+}
+.cardprojects{
+  @apply max-w-[1200px];
+
+
+}
+}
+@keyframes borderradius {
+  0%{
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50%{
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100%{
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+
+  }
+}
+
+@keyframes shake {
+	0%{
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+    transform: scale(0.5);
+	}
+  	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+    
+	}
+
+
+	10% {
+		transform: rotate(8deg);
+	}
+
+	20% {
+		transform: rotate(-10deg);
+	}
+  	40% {
+		transform: rotate(-10deg);
+	}
+  	60% {
+		transform: rotate(-10deg);
+	}
+
+	30%	 {
+		transform: rotate(10deg);
+	}
+  	
+	50%{
+		transform: rotate(10deg);
+	}
+  
+	70% {
+		transform: rotate(10deg);
+	}
+
+	80% {
+		transform: rotate(-8deg);
+	}
+
+	90% {
+		transform: rotate(8deg);
+	}
+}

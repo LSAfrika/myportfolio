@@ -1,0 +1,52 @@
+
+
+.panel {
+  @apply w-[80%] h-fit rounded-md bg-[#0f0c27] text-white min-h-[400px] justify-start items-center pt-5 flex-col flex px-4 gap-3 lg:min-h-[500px] lg:text-[20px] relative max-w-[450px]
+}
+
+.closemodal {
+  @apply absolute top-2 right-1 z-10 w-[30px] h-[30px] cursor-pointer
+}
+
+.title {
+  @apply bg-teal-500 text-white font-medium pr-10 pl-2 py-2 rounded-r-full mr-auto rounded-l-md
+}
+
+.technology {
+  @apply w-full min-h-[50px] p-2 flex justify-start items-center gap-1;
+
+  .icons {
+    @apply w-[25px] h-[25px] rounded-full shadow-black shadow-sm overflow-hidden  md:w-[50px] md:h-[50px];
+  }
+  .iconsbg{
+    @apply fill-white
+  }
+  .servicelogo{
+    @apply w-fit rounded-md ;
+    img{
+      @apply rounded-md
+    }
+
+
+  }
+
+  .roundedlogo{
+    @apply   max-w-[100px] overflow-hidden max-h-[100px] mx-auto rounded-full lg:max-w-[150px] lg:max-h-[150px]
+  }
+}
+
+.description{
+  @apply p-2 mb-5 text-center
+}
+
+button {
+  @apply bg-teal-500 text-white font-medium px-6 py-1 rounded-full w-fit flex justify-center gap-2 mb-8 mt-auto;
+
+  div {
+    @apply text-lg;
+  }
+
+  svg {
+    @apply w-[25px] h-[25px]
+  }
+}
