@@ -58,7 +58,13 @@ export class AppComponent {
       title: 'snapshare',
       bgimage: 'https://firebasestorage.googleapis.com/v0/b/lstudiosafrikake.appspot.com/o/snapshare.PNG?alt=media&token=fb1db600-3ec2-4b5c-b3c2-9ebf8eb5be14',
       icons: [
-        '../../../assets/angularicon.png','../../../assets/tailwind.jpg', '../../../assets/EXPRESS.png', '../../../assets/node.png' , '../../../assets/mongodb.svg', '../../../assets/socket.png'
+        'https://firebasestorage.googleapis.com/v0/b/lstudiosafrikake.appspot.com/o/angularicon.png?alt=media&token=2b223d0b-032f-4de2-a32f-304455f5d1a5',
+        'https://firebasestorage.googleapis.com/v0/b/lstudiosafrikake.appspot.com/o/tailwind.jpg?alt=media&token=ed973684-4361-4cad-ad1f-1970d1c9e513',
+        'https://firebasestorage.googleapis.com/v0/b/lstudiosafrikake.appspot.com/o/EXPRESS.png?alt=media&token=e864bc4b-8266-42f3-8276-1d6e9f8f746a',
+        'https://firebasestorage.googleapis.com/v0/b/lstudiosafrikake.appspot.com/o/node.png?alt=media&token=47af773d-955f-450c-89b1-3f8abb4f4309'  ,
+        'https://firebasestorage.googleapis.com/v0/b/lstudiosafrikake.appspot.com/o/mongodb.svg?alt=media&token=eccecd0d-9b14-43e4-aa7a-3b1a442ed7b1',
+        'https://firebasestorage.googleapis.com/v0/b/lstudiosafrikake.appspot.com/o/socket.png?alt=media&token=823f7e93-bb53-4af0-b700-15dde0c9b4b3'
+
       ],
       desc: 'A lite social media site for sharing photos  with friends capabilities include \n posting images,  commenting, sending direct messages, having live messages and live notifications with socket.io ',
       url: 'http://localhost:4200'
